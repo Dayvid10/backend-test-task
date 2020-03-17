@@ -110,7 +110,7 @@ class Student{
     $stmt->bindParam(':name', $this->name);
     $stmt->bindParam(':email', $this->email);
     $stmt->bindParam(':address', $this->address);
-    $stmt->bindParam(':password', $this->password);
+    $stmt->bindParam(':password', md5($this->password));
     $stmt->bindParam(':id', $this->id);
  
     // execute the query
